@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gift 1</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="question">Happy Birthday Habuski!
+            What do you want this year? :D</h2>
+    
+        <img class="gif" alt="gif" src="melody.gif"/>
+        <div class="btn-group">
+            <button class="yes-btn">Me!</button>
+            <button class="no-btn">Valorant skins</button>
+        </div>
+    </div>
+    <script>const wrapper = document.querySelector(".wrapper");
+        const question = document.querySelector(".question");
+        const gif = document.querySelector(".gif");
+        const yesBtn = document.querySelector(".yes-btn");
+        const noBtn = document.querySelector(".no-btn");
+        
+        yesBtn.addEventListener("click", () => {
+          question.innerHTML = "Yay!Meet me soon then.I'll give you everything >.<";
+          gif.src =
+          "KITTY.gif";
+        });
+        
+        noBtn.addEventListener("mouseover", () => {
+          const noBtnRect = noBtn.getBoundingClientRect();
+          const maxX = window.innerWidth - noBtnRect.width;
+          const maxY = window.innerHeight - noBtnRect.height;
+        
+          const randomX = Math.floor(Math.random() * maxX);
+          const randomY = Math.floor(Math.random() * maxY);
+        
+          noBtn.style.left = randomX + "px";
+          noBtn.style.top = randomY + "px";
+        });
+        </script>
+</body>
+</html>
